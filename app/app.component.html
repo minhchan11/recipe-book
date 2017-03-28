@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3" *ngFor = "let recipe of recipes">
+    <div class="col-md-3" *ngFor = "let recipe of recipes" [class]="isFavorite(recipe)">
       <h4>{{recipe.name}}</h4>
       <h5>{{recipe.description}}</h5>
       <button (click)="recipe.ingredientForm = !recipe.ingredientForm">{{recipe.ingredientForm ? 'Hide Ingredients' : 'Show Ingredients'}}</button>
@@ -17,6 +17,7 @@
       <div class="edit-form" *ngIf="recipe.editForm">
         <recipe-detail [recipe] = "recipe"></recipe-detail>
       </div>
+      <button (click)="recipe.favorite = !recipe.favorite">Toggle Favorite</button>
     </div>
   </div>
 </div>

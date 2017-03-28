@@ -9,4 +9,10 @@ import { RECIPES } from './mock-recipes';
 
 export class AppComponent{
   recipes = RECIPES;
+  isFavorite(recipe){
+    if(recipe.favorite)
+    {
+      return "bg-info";
+    }
+  };
 }
