@@ -12,7 +12,11 @@ export class AppComponent{
   isFavorite(recipe){
     if(recipe.favorite)
     {
-      return "bg-info";
+      return "recipe-tile favorite-tile";
+    }
+    else
+    {
+      return "recipe-tile"
     }
   };
 }

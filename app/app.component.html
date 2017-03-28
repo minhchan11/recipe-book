@@ -1,23 +1,18 @@
-<div class="container">
   <div class="row">
-    <div class="col-md-3" *ngFor = "let recipe of recipes" [class]="isFavorite(recipe)">
-      <h4>{{recipe.name}}</h4>
-      <h5>{{recipe.description}}</h5>
-      <button (click)="recipe.ingredientForm = !recipe.ingredientForm">{{recipe.ingredientForm ? 'Hide Ingredients' : 'Show Ingredients'}}</button>
-      <div class="ingredients" *ngIf="recipe.ingredientForm">
-        <h4 >Ingredients</h4>
-        <ul>
-          <li *ngFor="let ingredient of recipe.ingredients">
-            <p>{{ingredient.name}}</p>
-          </li>
-        </ul>
-
+    <div *ngFor = "let recipe of recipes" class="col-xs-3 tiles">
+      <div [class]="isFavorite(recipe)">
+        <h4>{{recipe.name}}</h4>
+        <h5>{{recipe.description}}</h5>
+        <button (click)="recipe.ingredientForm = !recipe.ingredientForm">{{recipe.ingredientForm ? 'Hide Ingredients' : 'Show Ingredients'}}</button>
+        <button (click)="recipe.editForm = !recipe.editForm">{{recipe.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button><br>
+        <button (click)="recipe.favorite = !recipe.favorite">Toggle Favorite</button>
+        <div class="ingredients" *ngIf="recipe.ingredientForm">
+          <h4 >Ingredients</h4>
+          <p *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}}</p>
+        </div>
+        <div class="edit-form" *ngIf="recipe.editForm">
+          <recipe-detail [recipe] = "recipe"></recipe-detail>
+        </div>
       </div>
-      <button (click)="recipe.editForm = !recipe.editForm">{{recipe.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button>
-      <div class="edit-form" *ngIf="recipe.editForm">
-        <recipe-detail [recipe] = "recipe"></recipe-detail>
-      </div>
-      <button (click)="recipe.favorite = !recipe.favorite">Toggle Favorite</button>
     </div>
   </div>
-</div>

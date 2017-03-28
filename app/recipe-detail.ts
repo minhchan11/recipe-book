@@ -5,9 +5,9 @@ import { Component, Input } from '@angular/core';
   selector: 'recipe-detail',
   template:`
   <label>Name: </label>
-  <input [(ngModel)]="recipe.name" placeholder="name">
+  <input [(ngModel)]="recipe.name" placeholder="name"><br>
   <label>Description: </label>
-  <input [(ngModel)]="recipe.description" placeholder="description">
+  <input [(ngModel)]="recipe.description" placeholder="description"><br>
   <label>Steps: </label>
   <input [(ngModel)]="recipe.steps" placeholder="steps">
   <br>

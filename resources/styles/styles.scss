@@ -1,0 +1,64 @@
+$main: #efefef;
+$tile: #db4848;
+$tile-text: #efefef;
+
+body {
+  background-color: $main;
+}
+
+.tiles {
+  border-radius: 50%;
+  height: 30vw;
+  width: 30vw;
+  margin-top: 10%;
+  margin-left: 5%;
+  background-color: $tile !important;
+}
+
+.tiles:nth-of-type(3n+0) {
+  height: 20vw;
+  width: 20vw;
+  background-color: black !important;
+  margin-top: 20%;
+  margin: 10%;
+}
+
+.tiles:nth-of-type(2n+0) {
+  height: 35vw;
+  width: 35vw;
+  background-color: red !important;
+  margin-top: 5%;
+  margin-right: 10%;
+}
+
+
+.recipe-tile {
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  text-align: center;
+  padding: 20% 5% 5% 5%;
+  margin-left: -4%;
+  color: #efefef;
+
+  li {
+    list-style: none;
+  }
+  input {
+    color: black;
+  }
+  button {
+    color: black;
+  }
+  h4 {
+    font-size: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+
+.favorite-tile {
+  background-color: orange;
+}
