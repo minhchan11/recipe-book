@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Recipe } from './recipe';
+import { RECIPES } from './mock-recipes';
 
 @Component({
     selector: 'app-root',
@@ -13,13 +15,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent{
-  recipes: Recipe[] = [
-    new Recipe("cake","add flour"),
-    new Recipe("cake","add flour"),
-    new Recipe("cake","add flour"),
-  ];
-}
-
-export class Recipe {
-  constructor(public name: string, public description: string) { }
+  recipes = RECIPES;
 }
