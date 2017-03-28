@@ -12,7 +12,7 @@
       </div>
       <button (click)="recipe.editForm = !recipe.editForm">{{recipe.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button>
       <div class="edit-form" *ngIf="recipe.editForm">
-        <h1>It works!</h1>
+        <recipe-detail [recipe] = "recipe"></recipe-detail>
       </div>
     </div>
   </div>
