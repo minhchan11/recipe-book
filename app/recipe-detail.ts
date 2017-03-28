@@ -1,4 +1,4 @@
-import { Recipe } from './recipe';
+import { Recipe, Ingredient } from './recipe';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -11,12 +11,12 @@ import { Component, Input } from '@angular/core';
   <label>Steps: </label>
   <input [(ngModel)]="recipe.steps" placeholder="steps">
   <label>Ingredients</label>
-
   <ul>
-    <li *ngFor="let ingredient of recipe.ingredients; let myIndex = index">
-      <input [(ngModel)]="recipe.ingredients[myIndex]">
+    <li *ngFor="let ingredient of recipe.ingredients">
+      <input [(ngModel)]="ingredient.name" placeholder="name">
     </li>
   </ul>
+
   `
 })
 

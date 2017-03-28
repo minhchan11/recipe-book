@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Recipe } from './recipe';
+import { Recipe, Ingredient } from './recipe';
 import { RECIPES } from './mock-recipes';
 
 @Component({

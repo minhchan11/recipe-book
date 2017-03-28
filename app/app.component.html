@@ -7,8 +7,11 @@
       <div class="ingredients" *ngIf="recipe.ingredientForm">
         <h4 >Ingredients</h4>
         <ul>
-          <li *ngFor = "let ingredient of recipe.ingredients">{{ingredient}}</li>
+          <li *ngFor="let ingredient of recipe.ingredients">
+            <p>{{ingredient.name}}</p>
+          </li>
         </ul>
+
       </div>
       <button (click)="recipe.editForm = !recipe.editForm">{{recipe.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button>
       <div class="edit-form" *ngIf="recipe.editForm">
