@@ -3,12 +3,16 @@
     <div class="col-md-3" *ngFor = "let recipe of recipes">
       <h4>{{recipe.name}}</h4>
       <h5>{{recipe.description}}</h5>
-      <button (click)="recipe.ingredientForm = !recipe.ingredientForm">{{recipe.ingredientForm ? 'hide' : 'show'}}</button>
+      <button (click)="recipe.ingredientForm = !recipe.ingredientForm">{{recipe.ingredientForm ? 'Hide Ingredients' : 'Show Ingredients'}}</button>
       <div class="ingredients" *ngIf="recipe.ingredientForm">
         <h4 >Ingredients</h4>
         <ul>
           <li *ngFor = "let ingredient of recipe.ingredients">{{ingredient}}</li>
         </ul>
+      </div>
+      <button (click)="recipe.editForm = !recipe.editForm">{{recipe.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button>
+      <div class="edit-form" *ngIf="recipe.editForm">
+        <h1>It works!</h1>
       </div>
     </div>
   </div>
