@@ -3,8 +3,8 @@
     <div class="col-md-3" *ngFor = "let recipe of recipes">
       <h4>{{recipe.name}}</h4>
       <h5>{{recipe.description}}</h5>
-      <button (click)="show = !show">{{show ? 'Show Ingredients' : 'Hide Ingredients'}}</button>
-      <div class="ingredients" *ngIf="show">
+      <button (click)="recipe.ingredientForm = !recipe.ingredientForm">{{recipe.ingredientForm ? 'hide' : 'show'}}</button>
+      <div class="ingredients" *ngIf="recipe.ingredientForm">
         <h4 >Ingredients</h4>
         <ul>
           <li *ngFor = "let ingredient of recipe.ingredients">{{ingredient}}</li>

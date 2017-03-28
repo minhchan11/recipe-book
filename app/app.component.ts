@@ -9,14 +9,4 @@ import { RECIPES } from './mock-recipes';
 
 export class AppComponent{
   recipes = RECIPES;
-  toggleIngedients(recipe) {
-    if(recipe.ingredientForm)
-    {
-      recipe.ingredientForm = false;
-    }
-    else
-    {
-      recipe.ingredientForm = true;
-    }
-  }
 }
